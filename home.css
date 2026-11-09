@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/main\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+
+/*first layout*/
+
+.first-layout {
+    width: 100%;
+    max-width: 1250px;
+
+    min-height: 650px;
+
+    display: flex;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25, 20, 30, 0.95),
+            rgba(13, 10, 15, 0.98)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.45);
+}
+
+/* =================================
+   DARK MODE (DEFAULT)
+================================= */
+
+:root {
+    --bg-color: #171522;
+    --card-color: #242133;
+    --text-color: #ffffff;
+    --secondary-text: #aaa6ba;
+    --border-color: rgba(255,255,255,0.1);
+    --button-color: #8065d8;
+    --input-color: #302b40;
+}
+
+
+/* =================================
+   LIGHT MODE
+================================= */
+
+[data-theme="light"] {
+    --bg-color: #f5f3fa;
+    --card-color: #ffffff;
+    --text-color: #252136;
+    --secondary-text: #777286;
+    --border-color: rgba(0,0,0,0.1);
+    --button-color: #8065d8;
+    --input-color: #f0edf7;
+}
+
+
+/* =================================
+   APPLY THEME
+================================= */
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+
+/* Cards */
+
+.home-card,
+.card,
+.movie-card,
+.section {
+    background-color: var(--card-color);
+    color: var(--text-color);
+
+    border-color: var(--border-color);
+
+    transition: 0.3s ease;
+}
+
+
+/* Headings */
+
+h1, h2, h3, h4 {
+    color: var(--text-color);
+}
+
+
+/* Paragraphs */
+
+p {
+    color: var(--secondary-text);
+}
+
+
+/* Inputs */
+
+input {
+    background-color: var(--input-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+
+/* Links */
+
+a {
+    color: var(--text-color);
+}
+
+
+/*themes*/
+
+/*.theme-toggle {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    background-color: var(--card-color);
+    color: var(--text-color);
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+   
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg);
+    background-color: var(--button-color);
+    color: white;
+}*/
