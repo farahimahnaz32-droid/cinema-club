@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login | Cinema Club</title>
+
+    <link rel="stylesheet" href="login.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="main-container">
+      <div class="first-layout">
+        <!-- LEFT SIDE -->
+
+        <div class="brand-section">
+          <div class="brand-logo">
+            <img src="./images/logo.png" alt="Cinema Club Logo" />
+          </div>
+
+          <h1>cinema club</h1>
+
+          <p>your world of movies</p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="auth-section">
+          <!-- NAVIGATION -->
+
+          <div class="auth-tabs">
+            <button type="button" class="auth-tab active" id="signInTab">
+              Sign In
+            </button>
+
+            <button type="button" class="auth-tab" id="logInTab">Log In</button>
+          </div>
+
+          <!-- SIGN IN FORM -->
+
+          <form action="#" id="signInForm" class="auth-form active-form">
+            <div class="form-title">
+              <h2>Create Account</h2>
+
+              <p>Join Cinema Club and track your movies.</p>
+            </div>
+
+            <!-- NAME -->
+
+            <div class="input-group">
+              <label for="signName">Full Name</label>
+
+              <input type="text" id="signName" placeholder="Enter your name" />
+
+              <small id="nameError"></small>
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+              <label for="signEmail">Email</label>
+
+              <input
+                type="email"
+                id="signEmail"
+                placeholder="Enter your email"
+              />
+
+              <small id="signEmailError"></small>
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="input-group">
+              <label for="signPassword">Password</label>
+
+              <div class="password-box">
+                <input
+                  type="password"
+                  id="signPassword"
+                  placeholder="Create a password"
+                />
+
+                <button
+                  type="button"
+                  class="show-password"
+                  data-target="signPassword"
+                >
+                  Show
+                </button>
+              </div>
+
+              <small id="signPasswordError"></small>
+            </div>
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="input-group">
+              <label for="confirmPassword"> Confirm Password </label>
+
+              <div class="password-box">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Repeat your password"
+                />
+
+                <button
+                  type="button"
+                  class="show-password"
+                  data-target="confirmPassword"
+                >
+                  Show
+                </button>
+              </div>
+
+              <small id="confirmPasswordError"></small>
+            </div>
+
+            <button type="submit" class="auth-button">Create Account</button>
+          </form>
+
+          <!-- LOGIN FORM -->
+
+          <form action="#" id="logInForm" class="auth-form">
+            <div class="form-title">
+              <h2>Welcome Back!</h2>
+
+              <p>Log in to continue watching and tracking your movies.</p>
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+              <label for="loginEmail">Email</label>
+
+              <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email"
+              />
+
+              <small id="loginEmailError"></small>
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="input-group">
+              <label for="loginPassword">Password</label>
+
+              <div class="password-box">
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                />
+
+                <button
+                  type="button"
+                  class="show-password"
+                  data-target="loginPassword"
+                >
+                  Show
+                </button>
+              </div>
+
+              <small id="loginPasswordError"></small>
+            </div>
+
+            <!-- OPTIONS -->
+
+            <div class="login-options">
+              <label>
+                <input type="checkbox" id="rememberMe" />
+
+                Remember me
+              </label>
+
+              <a href="#"> Forgot password? </a>
+            </div>
+
+            <button type="submit" class="auth-button">Log In</button>
+          </form>
+
+          <!-- MESSAGE -->
+
+          <div id="authMessage" class="auth-message"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="login.js"></script>
+  </body>
+</html>
