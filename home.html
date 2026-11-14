@@ -3,20 +3,253 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cinema club | Home</title>
+    <title>CineTrack | My List</title>
+
     <link rel="stylesheet" href="home.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+
+    <script src="app.js" defer></script>
   </head>
+
   <body>
     <section class="main-container">
       <div class="first-layout">
-        <!--<button id="themeToggle" class="theme-toggle" type="button">
-            <i class="fa-solid fa-moon"></i>
-          </button>-->
+        <aside class="side-bar">
+          <a class="logo-pack" href="#" aria-label="CineTrack home">
+            <img src="./images/logo.png" alt="" />
+            <span>CineTrack</span>
+          </a>
+
+          <nav class="tags" aria-label="Library">
+            <a class="tag1 active" href="#">
+              <i class="fa-solid fa-film" aria-hidden="true"></i>
+              <span>My List</span>
+            </a>
+            <a class="tag1" href="#">
+              <i class="fa-regular fa-bookmark" aria-hidden="true"></i>
+              <span>Saved movies</span>
+            </a>
+            <a class="tag1" href="#">
+              <i class="fa-regular fa-circle-play" aria-hidden="true"></i>
+              <span>Current watching</span>
+            </a>
+            <a class="tag1" href="#">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              <span>Favorites</span>
+            </a>
+          </nav>
+
+          <section class="watching">
+            <h2>Continue watching</h2>
+
+            <a class="continue-movie" href="#">
+              <img src="./images/the office.jpg" alt="" />
+              <span class="movie-title">The Office</span>
+              <i class="fa-solid fa-play play-icon" aria-hidden="true"></i>
+            </a>
+
+            <a class="continue-movie" href="#">
+              <img src="./images/avatar.jpg" alt="" />
+              <span class="movie-title">Avatar</span>
+              <i class="fa-solid fa-play play-icon" aria-hidden="true"></i>
+            </a>
+
+            <a class="continue-movie" href="#">
+              <img src="./images/harry potter.jpg" alt="" />
+              <span class="movie-title">Harry Potter</span>
+              <i class="fa-solid fa-play play-icon" aria-hidden="true"></i>
+            </a>
+          </section>
+        </aside>
+
+        <main class="content">
+          <header class="topbar">
+            <label class="search" for="movie-search">
+              <i
+                class="fa-solid fa-magnifying-glass search-icon"
+                aria-hidden="true"
+              ></i>
+              <input id="movie-search" type="search" placeholder=" " />
+              <span class="search-label">Search movies</span>
+            </label>
+
+            <button
+              id="themeToggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle theme"
+            >
+              <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+
+            <img
+              src="./images/profile picture.jpg"
+              alt="Your profile"
+              class="profile"
+            />
+          </header>
+
+          <section class="page-heading">
+            <div>
+              <p class="eyebrow">YOUR PERSONAL MOVIE DIARY</p>
+              <h1>My List</h1>
+            </div>
+          </section>
+
+          <section class="stats" aria-label="Movie statistics">
+            <div class="stat-card">
+              <span id="totalCount">0</span>
+              <p>Total movies</p>
+            </div>
+            <div class="stat-card">
+              <span id="watchedCount">0</span>
+              <p>Watched</p>
+            </div>
+            <div class="stat-card">
+              <span id="favoriteCount">0</span>
+              <p>Favorites</p>
+            </div>
+          </section>
+
+          <div class="list-controls">
+            <div class="filter-tabs" aria-label="Filter movies">
+              <button
+                class="filter-button active"
+                data-filter="all"
+                type="button"
+              >
+                All
+              </button>
+              <button
+                class="filter-button"
+                data-filter="to-watch"
+                type="button"
+              >
+                To Watch
+              </button>
+              <button class="filter-button" data-filter="watched" type="button">
+                Watched
+              </button>
+              <button
+                class="filter-button"
+                data-filter="favorites"
+                type="button"
+              >
+                Favorites
+              </button>
+            </div>
+
+            <select id="sortMovies" aria-label="Sort movies">
+              <option value="newest">Newest first</option>
+              <option value="rating">Highest rating</option>
+              <option value="title">Title A–Z</option>
+            </select>
+          </div>
+
+          <section
+            id="movieGrid"
+            class="movie-grid"
+            aria-label="Your movies"
+            aria-live="polite"
+          ></section>
+          <div class="movie-box">
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/friends.jpg" alt="Friends poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add Friends to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Friends</h3>
+                <div class="details">
+                  <span>1999</span>
+                  <span>Comedy</span>
+                  <span class="rating">★ 5.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/chess movie.jpg" alt="Gamble Girl poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add Gamble Girl to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Gamble Girl</h3>
+                <div class="details">
+                  <span>2022</span>
+                  <span>Biography</span>
+                  <span class="rating">★ 5.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img
+                  src="./images/breaking bad.jpg"
+                  alt="Breaking Bad poster"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add Breaking Bad to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Breaking Bad</h3>
+                <div class="details">
+                  <span>2007</span>
+                  <span>Crime</span>
+                  <span class="rating">★ 5.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/mehtalist.jpg" alt="The Mentalist poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add The Mentalist to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>The Mentalist</h3>
+                <div class="details">
+                  <span>2003</span>
+                  <span>Drama</span>
+                  <span class="rating">★ 5.5/10</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </main>
       </div>
     </section>
+    <script src="app.js" defer></script>
   </body>
 </html>
