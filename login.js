@@ -1,18 +1,10 @@
 
-// ==========================================
-// GET ELEMENTS
-// ==========================================
-
 const signInTab = document.getElementById("signInTab");
 const logInTab = document.getElementById("logInTab");
 
 const signInForm = document.getElementById("signInForm");
 const logInForm = document.getElementById("logInForm");
 
-
-// ==========================================
-// SWITCH BETWEEN SIGN IN AND LOG IN
-// ==========================================
 
 // SIGN IN TAB
 
@@ -38,11 +30,6 @@ logInTab.addEventListener("click", function () {
     signInForm.classList.remove("active-form");
 
 });
-
-
-// ==========================================
-// SHOW / HIDE PASSWORD
-// ==========================================
 
 const passwordButtons = document.querySelectorAll(".show-password");
 
@@ -71,12 +58,6 @@ passwordButtons.forEach(function (button) {
     });
 
 });
-
-
-// ==========================================
-// SIGN IN FORM VALIDATION
-// ==========================================
-
 signInForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
@@ -104,7 +85,7 @@ signInForm.addEventListener("submit", function (event) {
     const confirmError = document.getElementById("confirmPasswordError");
 
 
-    // CLEAR PREVIOUS ERRORS
+    //ERRORS
 
     nameError.textContent = "";
 
@@ -176,9 +157,6 @@ signInForm.addEventListener("submit", function (event) {
 });
 
 
-// ==========================================
-// LOG IN FORM VALIDATION
-// ==========================================
 
 logInForm.addEventListener("submit", function (event) {
 
