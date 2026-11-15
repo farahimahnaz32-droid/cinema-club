@@ -4,31 +4,21 @@ a movie tracking app to discover, organize, and keep track of your favorite movi
 
 # cien, a club
 
-A movie tracker for keeping track of films you want to watch and have watched.
+A personal movie tracker for organizing films and keeping track of what you want to watch and have watched.
 
 ## Features
 
-- Browse and search for movies
-- Keep track of movies you want to watch
+- Browse a personal movie list
+- Search for movies
+- Filter and sort movies
 - Mark movies as watched
-- [Add any other features your app has]
+- Save favorite movies
+- Switch between light and dark themes
 
-## Built With
+## Run Locally
 
-- [Your framework, such as React or Next.js]
-- [Any other tools or services your app uses]
+1. Clone the repository:
 
-## Getting Started
-
-### Requirements
-
-- [Node.js version, if your project uses Node.js]
-- [Any API key or account your app requires]
-
-### Install
-
-```bash
-git clone [your GitHub repository URL]
-cd [your project folder]
-npm install
-```
+   ```bash
+   git clone YOUR_GITHUB_REPOSITORY_URL
+   ```

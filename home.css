@@ -7,6 +7,7 @@
   --border: rgba(255, 255, 255, 0.1);
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -274,7 +275,7 @@ body {
   object-fit: cover;
 }
 
-/* Smaller screens */
+/* responsive */
 
 @media (max-width: 700px) {
   .main-container {
@@ -349,7 +350,7 @@ body {
     min-width: 0;
   }
 }
-/* Main content area */
+/* Main content side */
 .content {
   flex: 1;
   min-width: 0;
@@ -363,7 +364,7 @@ body {
   gap: 14px;
   min-height: 44px;
 }
-
+/*search bar*/
 .search {
   position: relative;
   display: flex;
@@ -417,7 +418,7 @@ body {
   background: #1a1720;
   font-size: 11px;
 }
-
+/* dark and light mood*/
 .theme-toggle,
 .profile {
   flex: 0 0 auto;
@@ -443,7 +444,7 @@ body {
   object-fit: cover;
 }
 
-/* Page title and search */
+/*page title and search bar*/
 .page-heading,
 .list-controls,
 .movie-card-heading {
@@ -497,7 +498,6 @@ body {
   color: #aaa5b6;
 }
 
-/* Statistics */
 .stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -783,4 +783,82 @@ body {
   .movie-box {
     grid-template-columns: 1fr;
   }
+}
+/* Light theme */
+:root[data-theme="light"] {
+  --panel: rgba(255, 255, 255, 0.96);
+  --panel-soft: rgba(45, 30, 55, 0.06);
+  --text: #241d2b;
+  --muted: #6d6573;
+  --border: rgba(45, 30, 55, 0.15);
+}
+
+/* Page background */
+:root[data-theme="light"] body {
+  color: var(--text);
+  background:
+    linear-gradient(rgba(250, 247, 252, 0.78), rgba(250, 247, 252, 0.88)),
+    url("./images/main background.jpg") center / cover fixed,
+    #f5f1f7;
+}
+
+/* Main panel and sidebar */
+:root[data-theme="light"] .first-layout {
+  background: var(--panel);
+  box-shadow: 0 24px 80px rgba(40, 25, 50, 0.16);
+}
+
+:root[data-theme="light"] .side-bar {
+  background: rgba(45, 30, 55, 0.025);
+}
+
+/* Search and controls */
+:root[data-theme="light"] .search,
+:root[data-theme="light"] .list-search,
+:root[data-theme="light"] .stats,
+:root[data-theme="light"] .filter-button,
+:root[data-theme="light"] #sortMovies,
+:root[data-theme="light"] .watched-button {
+  color: var(--text);
+  border-color: var(--border);
+  background-color: var(--panel-soft);
+}
+
+:root[data-theme="light"] .search input,
+:root[data-theme="light"] .list-search input {
+  color: var(--text);
+}
+
+:root[data-theme="light"] .search-label,
+:root[data-theme="light"] .search:focus-within .search-label {
+  background: #fff;
+}
+
+/* Movie cards */
+:root[data-theme="light"] .movie-card {
+  border-color: var(--border);
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(40, 25, 50, 0.08);
+}
+
+:root[data-theme="light"] .movie-info h3,
+:root[data-theme="light"] .movie-card-info h2 {
+  color: var(--text);
+}
+
+:root[data-theme="light"] .details,
+:root[data-theme="light"] .movie-card-info p,
+:root[data-theme="light"] .empty-message {
+  color: var(--muted);
+}
+
+:root[data-theme="light"] .poster-wrap {
+  background: #e9e2ed;
+}
+
+/* Theme button */
+:root[data-theme="light"] .theme-toggle {
+  color: var(--text);
+  border-color: var(--border);
+  background: var(--panel-soft);
 }
