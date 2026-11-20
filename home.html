@@ -10,11 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-
-    <script src="app.js" defer></script>
   </head>
 
   <body>
+    <!--my main conrainer-->
     <section class="main-container">
       <div class="first-layout">
         <aside class="side-bar">
@@ -22,26 +21,26 @@
             <img src="./images/logo.png" alt="" />
             <span>CineTrack</span>
           </a>
-
+          <!--navbar and the sidebar-->
           <nav class="tags" aria-label="Library">
-            <a class="tag1 active" href="#">
+            <a class="tag1 active" href="#" data-genre="all">
               <i class="fa-solid fa-film" aria-hidden="true"></i>
-              <span>My List</span>
+              <span>All Genres</span>
             </a>
-            <a class="tag1" href="#">
-              <i class="fa-regular fa-bookmark" aria-hidden="true"></i>
-              <span>Saved movies</span>
+            <a class="tag1" href="#" data-genre="historical">
+              <i class="fa-solid fa-hourglass-half"></i>
+              <span>historical</span>
             </a>
-            <a class="tag1" href="#">
-              <i class="fa-regular fa-circle-play" aria-hidden="true"></i>
-              <span>Current watching</span>
+            <a class="tag1" href="#" data-genre="drama,romance">
+              <i class="fa-solid fa-masks-theater"></i>
+              <span>Drama and romance</span>
             </a>
-            <a class="tag1" href="#">
-              <i class="fa-regular fa-heart" aria-hidden="true"></i>
-              <span>Favorites</span>
+            <a class="tag1" href="#" data-genre="action">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Action</span>
             </a>
           </nav>
-
+          <!--continue watching section(inside sidebar/leftside)-->
           <section class="watching">
             <h2>Continue watching</h2>
 
@@ -64,7 +63,7 @@
             </a>
           </section>
         </aside>
-
+        <!--themain container(on the right and center)-->
         <main class="content">
           <header class="topbar">
             <label class="search" for="movie-search">
@@ -75,7 +74,7 @@
               <input id="movie-search" type="search" placeholder=" " />
               <span class="search-label">Search movies</span>
             </label>
-
+            <!--light and dark mood button-->
             <button
               id="themeToggle"
               class="theme-toggle"
@@ -84,21 +83,21 @@
             >
               <i class="fa-solid fa-moon" aria-hidden="true"></i>
             </button>
-
+            <!--profile tab-->
             <img
               src="./images/profile picture.jpg"
               alt="Your profile"
               class="profile"
             />
           </header>
-
+          <!--heading part-->
           <section class="page-heading">
             <div>
               <p class="eyebrow">YOUR PERSONAL MOVIE DIARY</p>
               <h1>My List</h1>
             </div>
           </section>
-
+          <!--starting of movie cards-->
           <section class="stats" aria-label="Movie statistics">
             <div class="stat-card">
               <span id="totalCount">0</span>
@@ -113,7 +112,7 @@
               <p>Favorites</p>
             </div>
           </section>
-
+          <!--control panel, including filters-->
           <div class="list-controls">
             <div class="filter-tabs" aria-label="Filter movies">
               <button
@@ -141,14 +140,14 @@
                 Favorites
               </button>
             </div>
-
+            <!--sorting movies y filter tabs-->
             <select id="sortMovies" aria-label="Sort movies">
               <option value="newest">Newest first</option>
               <option value="rating">Highest rating</option>
               <option value="title">Title A–Z</option>
             </select>
           </div>
-
+          <!--main section of movie cards-->
           <section
             id="movieGrid"
             class="movie-grid"
@@ -246,10 +245,281 @@
                 </div>
               </div>
             </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/drama.jpg" alt="The drama poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add The drama to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>The Drama</h3>
+                <div class="details">
+                  <span>2026</span>
+                  <span>Drama</span>
+                  <span class="rating">★ 6.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/dune.jpg" alt="The dune poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add The dune to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Dune</h3>
+                <div class="details">
+                  <span>2021</span>
+                  <span>Action, science fiction</span>
+                  <span class="rating">★ 8.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/hamnet.jpg" alt="the hamnet poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add The hamnet to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>The Hamnet</h3>
+                <div class="details">
+                  <span>2022</span>
+                  <span>science fiction</span>
+                  <span class="rating">★ 5.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/hope.jpg" alt="The hope poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add The hope to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Hope</h3>
+                <div class="details">
+                  <span>2023</span>
+                  <span>action</span>
+                  <span class="rating">★ 5.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/john wick.jpg" alt="John Wick poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add Joun Wick to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>John Wick</h3>
+                <div class="details">
+                  <span>2009</span>
+                  <span>action</span>
+                  <span class="rating">★ 9.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/odysee.jpg" alt="The odysee poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add The odysee to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>The Odysee</h3>
+                <div class="details">
+                  <span>2026</span>
+                  <span>Historical</span>
+                  <span class="rating">★ 9.5/10</span>
+                </div>
+              </div>
+            </article>
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/devil.jpg" alt="devil wears prada poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add devil wears prada to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Devil wears prada</h3>
+                <div class="details">
+                  <span>2026</span>
+                  <span>Drama</span>
+                  <span class="rating">★ 8.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/cruella.jpg" alt="cruella poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add cruella to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Cruella</h3>
+                <div class="details">
+                  <span>2020</span>
+                  <span>Drama</span>
+                  <span class="rating">★ 7.5/10</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img
+                  src="./images/marty suprem.jpg"
+                  alt="marty suprem poster"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add marty suprem to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Marty suprem</h3>
+                <div class="details">
+                  <span>2025</span>
+                  <span>Biography</span>
+                  <span class="rating">★ 8.5/10</span>
+                </div>
+              </div>
+            </article>
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img src="./images/black swan.jpg" alt="Black swan poster" />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add black swan to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Black swan</h3>
+                <div class="details">
+                  <span>2017</span>
+                  <span>Drama</span>
+                  <span class="rating">★ 9.5/10</span>
+                </div>
+              </div>
+            </article>
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img
+                  src="./images/deat poets soceity.jpg"
+                  alt="dead poets soceity poster"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add dead poet soceity to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>Dead poets society</h3>
+                <div class="details">
+                  <span>2003</span>
+                  <span>Drama</span>
+                  <span class="rating">★ 8.5/10</span>
+                </div>
+              </div>
+            </article>
+            <article class="movie-card">
+              <div class="poster-wrap">
+                <img
+                  src="./images/interstellar.jpg"
+                  alt="interstellar poster"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Add interstellar to favorites"
+                >
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div class="movie-info">
+                <h3>interstellar</h3>
+                <div class="details">
+                  <span>2017</span>
+                  <span>science fiction</span>
+                  <span class="rating">★ 9.5/10</span>
+                </div>
+              </div>
+            </article>
+            <!--calude request-->
+            <p id="resultCount"></p>
           </div>
         </main>
       </div>
     </section>
-    <script src="app.js" defer></script>
+    <script src="home.js"></script>
   </body>
 </html>

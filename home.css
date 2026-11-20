@@ -862,3 +862,59 @@ body {
   border-color: var(--border);
   background: var(--panel-soft);
 }
+.movie-box {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.movie-actions {
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.movie-actions button,
+#addMovieButton {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--panel-soft);
+  cursor: pointer;
+}
+
+.movie-actions button:hover,
+#addMovieButton:hover {
+  border-color: var(--accent);
+}
+
+.movie-status {
+  margin-top: 10px;
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.movie-review {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+#addMovieButton {
+  margin-left: 12px;
+}
+
+@media (max-width: 900px) {
+  .movie-box {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .movie-box {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
